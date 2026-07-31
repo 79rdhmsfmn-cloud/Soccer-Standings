@@ -1,7 +1,7 @@
 table {
     margin: 0 auto; /* Centers the table horizontally */
     border-collapse: collapse; /* Removes double borders */
-    width: 40%; /* Makes the table take up 70% of the screen */
+    width: 50%; /* Makes the table take up 70% of the screen */
 }
 
 th, td {
@@ -22,61 +22,213 @@ body {
     color: white;
     font-family: Arial, sans-serif;
     
-    
-.woodstock {
-    background: linear-gradient(90deg, #7A1F35 50%, #808080 50%);
+/* =====================================
+   TEAM COLOR GRADIENTS
+   ===================================== */
+/*
+====================================================
+tr
+
+Applies this style to every table row.
+
+In this code:
+- Makes all team rows have white text
+- Adds a text shadow so the names stay readable
+- Adds a smooth animation when the row changes
+
+====================================================
+*/
+
+tr {
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    transition: 0.25s ease;
 }
+
+
+/*
+====================================================
+td
+
+Applies this style to every table cell.
+
+In this code:
+- Adds a dark transparent layer over each cell
+- Helps make bright team colors easier to read
+- Keeps white parts of gradients from hiding text
+
+====================================================
+*/
+
+td {
+    background: rgba(0,0,0,0.25);
+}
+
+
+/*
+====================================================
+tbody tr:hover
+
+Only affects table rows inside the table body
+when the mouse is hovering over them.
+
+In this code:
+- Makes the row slightly bigger
+- Creates a small pop-out animation
+- Does not affect the table header
+
+====================================================
+*/
+
+tbody tr:hover {
+    transform: scale(1.01);
+}
+
+tr {
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    transition: 0.25s ease;
+}
+
+
+/* Dark glass layer over team colors */
+td {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+
+/* Hover effect */
+tbody tr:hover {
+    transform: scale(1.01);
+}
+
+
+/* Team gradients */
+
+
+.woodstock {
+    background: linear-gradient(
+        135deg,
+        rgba(122, 31, 53, 0.7),
+        rgba(128, 128, 128, 0.7)
+    );
+}
+
 
 .nackawic {
-    background: linear-gradient(90deg, #D4AF37 50%, #611C2B 50%);
+    background: linear-gradient(
+        135deg,
+        rgba(212, 175, 55, 0.65),
+        rgba(97, 28, 43, 0.75)
+    );
 }
+
 
 .fredericton {
-    background: linear-gradient(90deg, #003B70 50%, #FFFFFF 50%);
+    background: linear-gradient(
+        135deg,
+        rgba(0, 59, 112, 0.75),
+        rgba(255, 255, 255, 0.35)
+    );
 }
+
 
 .carleton-north {
-    background: linear-gradient(90deg, #1E3A8A 50%, #FFFFFF 50%);
+    background: linear-gradient(
+        135deg,
+        rgba(30, 58, 138, 0.75),
+        rgba(255, 255, 255, 0.35)
+    );
 }
+
 
 .saint-marys {
-    background: linear-gradient(90deg, #8B0000 50%, #FFFFFF 50%);
+    background: linear-gradient(
+        135deg,
+        rgba(139, 0, 0, 0.75),
+        rgba(255, 255, 255, 0.35)
+    );
 }
+
 
 .john-caldwell {
-    background: linear-gradient(90deg, #006633 50%, #FFFFFF 50%);
+    background: linear-gradient(
+        135deg,
+        rgba(0, 102, 51, 0.75),
+        rgba(255, 255, 255, 0.35)
+    );
 }
+
 
 .hampton {
-    background: linear-gradient(90deg, #111111 50%, #A7A9AC 50%);
+    background: linear-gradient(
+        135deg,
+        rgba(17, 17, 17, 0.9),
+        rgba(167, 169, 172, 0.65)
+    );
 }
+
 
 .hartland {
-    background: linear-gradient(90deg, #003366 50%, #FFFFFF 50%);
+    background: linear-gradient(
+        135deg,
+        rgba(0, 51, 102, 0.75),
+        rgba(255, 255, 255, 0.35)
+    );
 }
+
 
 .harvey {
-    background: linear-gradient(90deg, #800000 50%, #FFFFFF 50%);
+    background: linear-gradient(
+        135deg,
+        rgba(128, 0, 0, 0.75),
+        rgba(255, 255, 255, 0.35)
+    );
 }
+
 
 .sir-james-dunn {
-    background: linear-gradient(90deg, #003366 50%, #FFD700 50%);
+    background: linear-gradient(
+        135deg,
+        rgba(0, 51, 102, 0.75),
+        rgba(255, 215, 0, 0.55)
+    );
 }
+
 
 .st-stephen {
-    background: linear-gradient(90deg, #006400 50%, #FFFFFF 50%);
+    background: linear-gradient(
+        135deg,
+        rgba(0, 100, 0, 0.75),
+        rgba(255, 255, 255, 0.35)
+    );
 }
+
 
 .fundy {
-    background: linear-gradient(90deg, #0057B8 50%, #FFFFFF 50%);
+    background: linear-gradient(
+        135deg,
+        rgba(0, 87, 184, 0.75),
+        rgba(255, 255, 255, 0.35)
+    );
 }
+
 
 .mcadam {
-    background: linear-gradient(90deg, #800000 50%, #000000 50%);
+    background: linear-gradient(
+        135deg,
+        rgba(128, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.85)
+    );
 }
 
+
 .southern-victoria {
-    background: linear-gradient(90deg, #4B0082 50%, #FFFFFF 50%);
+    background: linear-gradient(
+        135deg,
+        rgba(75, 0, 130, 0.75),
+        rgba(255, 255, 255, 0.35)
+    );
 }
 
     
