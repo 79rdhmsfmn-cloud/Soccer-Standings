@@ -33,6 +33,6 @@ body {
 .circle {
     width: 100px;
     height: 100px;
-    background: black;
+    background: white;
     border-radius: 50%;
 }
