@@ -271,4 +271,21 @@ tbody tr:hover {
     );
 }
 
-    
+.team-search{
+    text-align: center;
+    margin: 30px auto;
+}
+.team-search label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.team-search input {
+    width: 300px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: #111827;
+    color: white;
+    font-size: 15px;
+}
