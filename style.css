@@ -21,4 +21,12 @@ body {
     background-color: #0B0D10;
     color: white;
     font-family: Arial, sans-serif;
+    background-image: 
+        linear-gradient(
+            to bottom,
+            transparent 49.8%,
+            rgba(255,255,255,0.08) 49.8%,
+            rgba(255,255,255,0.08) 50.2%,
+            transparent 50.2%
+        );
 }
