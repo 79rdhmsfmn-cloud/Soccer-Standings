@@ -1,7 +1,7 @@
 table {
     margin: 0 auto; /* Centers the table horizontally */
     border-collapse: collapse; /* Removes double borders */
-    width: 70%; /* Makes the table take up 70% of the screen */
+    width: 40%; /* Makes the table take up 70% of the screen */
 }
 
 th, td {
