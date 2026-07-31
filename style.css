@@ -301,7 +301,7 @@ h5 {
 }
 .pill-box {
   display: inline-block;
-  background-color: #007bff; /* Change to your preferred color */
+  background-color: #1f0202;
   padding: 10px 30px;        /* Controls height and width padding */
   border-radius: 50px;       /* Gives it the rounded pill shape */
 }
