@@ -1,21 +1,61 @@
+/*
+====================================================
+TABLE DESIGN
+
+table
+
+Controls the entire standings table.
+
+In this code:
+
+- margin: 40px auto;
+  Centers the table horizontally and adds space
+  above and below it.
+
+- width: 85%;
+  Makes the table wider so it fills more of
+  the screen.
+
+- max-width: 1200px;
+  Stops the table from becoming too large on
+  big screens.
+
+- border-collapse: separate;
+  Allows rounded corners and spacing effects.
+
+- border-spacing: 0;
+  Removes gaps between table cells.
+
+- overflow: hidden;
+  Keeps everything inside the rounded corners.
+
+- border-radius: 14px;
+  Rounds the corners to make it look like
+  a modern card.
+
+====================================================
+*/
 table {
-    margin: 0 auto; /* Centers the table horizontally */
-    border-collapse: collapse; /* Removes double borders */
-    width: 50%; /* Makes the table take up 70% of the screen */
+    margin: 40px auto; /* Centers the table horizontally */
+    border-collapse: separate; /* Removes double borders */
+    width: 80%; /* Makes the table take up 70% of the screen */
+    border-spacing 0; 
+    overflow: hidden;
+    border-radius: 14px;
 }
 
 th, td {
     border: 1px solid black; /* Adds borders to every cell */
-    padding: 10px; /* Adds space inside each cell */
+    padding: 8px 10px; /* Adds space inside each cell */
     text-align: center; /* Centers text inside cells */
+    height: 35px;
 }
 
 th {
     background-color: black;
     color: white;
-}
-.Nackawic {
-    background: gold;
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 body {
     background-color: #0B0D10;
