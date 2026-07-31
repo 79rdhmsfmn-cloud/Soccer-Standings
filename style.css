@@ -1,1 +1,16 @@
-h
+table {
+    margin: 0 auto; /* Centers the table horizontally */
+    border-collapse: collapse; /* Removes double borders */
+    width: 70%; /* Makes the table take up 70% of the screen */
+}
+
+th, td {
+    border: 1px solid black; /* Adds borders to every cell */
+    padding: 10px; /* Adds space inside each cell */
+    text-align: center; /* Centers text inside cells */
+}
+
+th {
+    background-color: black;
+    color: white;
+}
