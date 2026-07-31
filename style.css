@@ -21,3 +21,62 @@ body {
     background-color: #0B0D10;
     color: white;
     font-family: Arial, sans-serif;
+    
+    
+.woodstock {
+    background: linear-gradient(90deg, #7A1F35 50%, #808080 50%);
+}
+
+.nackawic {
+    background: linear-gradient(90deg, #D4AF37 50%, #611C2B 50%);
+}
+
+.fredericton {
+    background: linear-gradient(90deg, #003B70 50%, #FFFFFF 50%);
+}
+
+.carleton-north {
+    background: linear-gradient(90deg, #1E3A8A 50%, #FFFFFF 50%);
+}
+
+.saint-marys {
+    background: linear-gradient(90deg, #8B0000 50%, #FFFFFF 50%);
+}
+
+.john-caldwell {
+    background: linear-gradient(90deg, #006633 50%, #FFFFFF 50%);
+}
+
+.hampton {
+    background: linear-gradient(90deg, #111111 50%, #A7A9AC 50%);
+}
+
+.hartland {
+    background: linear-gradient(90deg, #003366 50%, #FFFFFF 50%);
+}
+
+.harvey {
+    background: linear-gradient(90deg, #800000 50%, #FFFFFF 50%);
+}
+
+.sir-james-dunn {
+    background: linear-gradient(90deg, #003366 50%, #FFD700 50%);
+}
+
+.st-stephen {
+    background: linear-gradient(90deg, #006400 50%, #FFFFFF 50%);
+}
+
+.fundy {
+    background: linear-gradient(90deg, #0057B8 50%, #FFFFFF 50%);
+}
+
+.mcadam {
+    background: linear-gradient(90deg, #800000 50%, #000000 50%);
+}
+
+.southern-victoria {
+    background: linear-gradient(90deg, #4B0082 50%, #FFFFFF 50%);
+}
+
+    
