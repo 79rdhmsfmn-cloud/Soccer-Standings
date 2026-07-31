@@ -58,7 +58,7 @@ th {
     letter-spacing: 1px;
 }
 body {
-    background-color: #32000C
+    background-color: #32000C;
     background-image: repeating-linear-gradient(
       45deg,
       rgba(255, 215, 0, 0.03),
