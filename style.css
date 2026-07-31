@@ -311,3 +311,6 @@ h5 {
   font-size: 24px;           /* Adjust size as needed */
   margin: 0;                 /* Removes default H1 spacing */
 }
+.team-search {
+    color: gold;
+}
