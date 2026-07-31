@@ -59,7 +59,13 @@ th {
 }
 body {
     background-color: #32000C
-    background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+    background-image: repeating-linear-gradient(
+      45deg,
+      rgba(255, 215, 0, 0.03),
+      rgba(255, 215, 0, 0.03) 1px,
+      transparent 1px,
+      transparent 20px
+);
 }
     color: #D2AC47;
     font-family: Arial, sans-serif;
