@@ -329,5 +329,9 @@ row.style.display = "none";
     color: gold;
 }
 
-#s
+#showMoreButton {
+    margin-left: 20px; /* Pushes the button 20 pixels to the right */
+    background-color: #1f0202;
+    color: gold;
+}
 
