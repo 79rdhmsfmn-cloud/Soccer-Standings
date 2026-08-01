@@ -192,9 +192,11 @@ Make it reveal the hidden rows.
 
 
 showMoreButton.addEventListener("click", function(){
-
-
-    console.log("Button clicked");
+    rows.forEach((row, index) => {
+        if(index >= 7) {
+            row.style.display = "";
+        }
+    });
 
 
 });
