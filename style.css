@@ -147,19 +147,19 @@ In this code:
 
 body {
 
-    background-color: #32000C;
+    background-color: #000000;
 
 
     background-image: repeating-linear-gradient(
         45deg,
-        rgba(255, 215, 0, 0.03),
-        rgba(255, 215, 0, 0.03) 1px,
+        rgba(0, 0, 0, 0.03),
+        rgba(0, 0, 0, 0.03) 1px,
         transparent 1px,
         transparent 20px
     );
         animation: moveLines 8s linear infinite;
 
-    color: #D2AC47;
+    color: #FFFFFF;
 
 
     font-family: Arial, sans-serif;
