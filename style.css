@@ -800,7 +800,7 @@ Controls the main title inside the pill.
 
 
     /* Box color */
-    background-color: ⁠#1E2229;
+    background-color: ⁠#32000C;
 
 
 
@@ -817,7 +817,7 @@ Controls the main title inside the pill.
     
     outline-style: solid; /* solid dashed or dotted options*/
     
-    outline-color: #32000C;
+    outline-color: #000000;
     
     position: relative; /* Activates directional offsets */
     top: 20px;          /* Pushes the element 20px down from the top */
