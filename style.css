@@ -144,23 +144,40 @@ In this code:
 ====================================================
 */
 
+/*
+====================================================
+BODY DESIGN
+
+Modern Apple + Adidas style background
+
+- Gold glow = stadium lighting
+- White glow = premium reflection
+- Dark gradient = luxury background
+- Animation = slowly moves the lights
+
+====================================================
+*/
+
+
 body {
 
     background:
 
-    /* Soft gold stadium light */
+    /* Gold stadium spotlight */
     radial-gradient(
         circle at 50% 0%,
         rgba(255,215,0,0.18),
         transparent 35%
     ),
 
-    /* Subtle white light */
+
+    /* White light reflection */
     radial-gradient(
         circle at 85% 80%,
         rgba(255,255,255,0.08),
         transparent 25%
     ),
+
 
     /* Dark premium base */
     linear-gradient(
@@ -169,16 +186,81 @@ body {
         #111111,
         #1b1b1b
     );
+    background-size: 200% 200%;
 
     color:white;
 
     font-family:Arial, sans-serif;
 
+
     min-height:100vh;
 
-    animation: backgroundMove 18s infinite alternate ease-in-out;
+
+    /* Runs the background animation */
+    animation:
+    backgroundMove 18s infinite alternate ease-in-out;
 
 }
+
+
+
+/*
+====================================================
+BACKGROUND ANIMATION
+
+Moves each background layer separately.
+
+Layer 1 = Gold glow
+Layer 2 = White glow
+Layer 3 = Dark background
+
+====================================================
+*/
+
+
+@keyframes backgroundMove {
+
+
+    from {
+
+
+        background-position:
+
+        /* Gold starts top-left */
+        0% 0%,
+
+
+        /* White starts bottom-right */
+        100% 100%,
+
+
+        /* Dark background stays still */
+        0% 0%;
+
+
+    }
+
+
+
+    to {
+
+
+        background-position:
+
+        /* Gold moves across */
+        100% 30%,
+
+
+        /* White moves opposite direction */
+        0% 70%,
+
+
+        /* Dark background stays still */
+        0% 0%;
+
+
+    }
+
 
 }
 /*
@@ -907,25 +989,4 @@ footer{
     color:#777;
     font-family:"Inter",sans-serif;
 }
-@keyframes backgroundMove {
 
-    from {
-
-        background-position:
-        0% 0%,
-        0% 0%,
-        0% 0%;
-
-    }
-
-
-    to {
-
-        background-position:
-        100% 100%,
-        100% 100%,
-        100% 100%;
-
-    }
-
-}
