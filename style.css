@@ -817,4 +817,8 @@ Controls the main title inside the pill.
     outline-style: solid; /* solid dashed or dotted options*/
     
     outline-color: #FFD700;
+    
+    position: relative; /* Activates directional offsets */
+    top: 20px;          /* Pushes the element 20px down from the top */
+    left: 15px; 
 }
