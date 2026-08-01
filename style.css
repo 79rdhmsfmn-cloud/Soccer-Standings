@@ -157,7 +157,7 @@ body {
         transparent 1px,
         transparent 20px
     );
-
+        animation: moveLines 8s linear infinite;
 
     color: #D2AC47;
 
