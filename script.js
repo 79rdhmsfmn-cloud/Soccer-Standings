@@ -248,13 +248,15 @@ search.addEventListener("input", function(){
 
 rows.forEach((row, index) => { //element (Required): The current item being processed in the array.index (Optional): The index number of the current item, starting at 0.array (Optional): The complete array object that forEach() was originally called upon.
 
-    if (index >= 7) {
-
+    if (index >= 6) {
         // Hide rows 8–14
-
+        row.style.display: none;
+    } else {
     }
 
 });
 const showmorebutton = document.getElementById("showmorebutton");
 search.addEventListener("click", function(){
+    rows.forEach((row, index) => {
+    });
 });
