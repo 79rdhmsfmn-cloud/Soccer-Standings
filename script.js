@@ -257,3 +257,4 @@ rows.forEach((row, index) => { //element (Required): The current item being proc
 });
 const showmorebutton = document.getElementById("showmorebutton");
 search.addEventListener("click", function(){
+});
