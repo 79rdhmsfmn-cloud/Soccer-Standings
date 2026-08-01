@@ -328,14 +328,9 @@ row.style.display = "none";
 
 
 
-#showLessButton,
-#showMoreButton {
-    margin-left: 20px;
-    background-color: #000000;
-    color: gold;
-    padding: 10px 25px;
-    border: 2px solid gold;
-    border-radius: 50px;
-    font-size: 16px;
+#showMoreButton,
+#showLessButton {
+    background-color: red !important;
+    color: white !important;
+    font-size: 30px;
 }
-
