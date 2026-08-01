@@ -325,13 +325,13 @@ row.style.display = "none";
 
 #showLessButton {
     margin-left: 20px; /* Pushes the button 20 pixels to the right */
-    background-color: #1f0202;
+    background-color: #000000;
     color: gold;
 }
 
 #showMoreButton {
     margin-left: 20px; /* Pushes the button 20 pixels to the right */
-    background-color: #1f0202;
+    background-color: #000000;
     color: gold;
 }
 
