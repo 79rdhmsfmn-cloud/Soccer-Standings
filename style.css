@@ -12,325 +12,740 @@ In this code:
   Centers the table horizontally and adds space
   above and below it.
 
-- width: 85%;
-  Makes the table wider so it fills more of
-  the screen.
-
-- max-width: 1200px;
-  Stops the table from becoming too large on
-  big screens.
+- width: 80%;
+  Makes the table take up most of the screen
+  while leaving some space on the sides.
 
 - border-collapse: separate;
-  Allows rounded corners and spacing effects.
+  Allows rounded corners to work properly.
 
 - border-spacing: 0;
-  Removes gaps between table cells.
+  Removes unwanted gaps between cells.
 
 - overflow: hidden;
-  Keeps everything inside the rounded corners.
+  Keeps content inside rounded corners.
 
 - border-radius: 14px;
-  Rounds the corners to make it look like
-  a modern card.
+  Gives the table smooth rounded corners.
 
 ====================================================
 */
+
+
 table {
-    margin: 40px auto; /* Centers the table horizontally */
-    border-collapse: separate; /* Removes double borders */
-    width: 80%; /* Makes the table take up 70% of the screen */
-    border-spacing 0; 
+
+    margin: 40px auto;
+
+    width: 80%;
+
+    border-collapse: separate;
+
+    border-spacing: 0;
+
     overflow: hidden;
+
     border-radius: 14px;
+
 }
+
+
+
+
+/*
+====================================================
+TABLE CELLS
+
+th = Table Header
+td = Table Data
+
+Controls the individual boxes inside the table.
+
+In this code:
+
+- border:
+  Creates lines between cells.
+
+- padding:
+  Adds space inside each cell so text isn't
+  touching the edges.
+
+- text-align:
+  Centers the information.
+
+====================================================
+*/
+
 
 th, td {
-    border: 1px solid black; /* Adds borders to every cell */
-    padding: 8px 10px; /* Adds space inside each cell */
-    text-align: center; /* Centers text inside cells */
+
+    border: 1px solid black;
+
+    padding: 8px 10px;
+
+    text-align: center;
+
     height: 35px;
+
 }
+
+
+
+
+/*
+====================================================
+TABLE HEADER
+
+th controls the top row of the table.
+
+This is where:
+Pos | Team | Pts | GP
+
+is displayed.
+
+====================================================
+*/
+
 
 th {
+
     background-color: black;
+
     color: white;
+
     font-size: 14px;
+
     letter-spacing: 1px;
+
 }
-body {
-    background-color: #32000C;
-    background-image: repeating-linear-gradient(
-      45deg,
-      rgba(255, 215, 0, 0.03),
-      rgba(255, 215, 0, 0.03) 1px,
-      transparent 1px,
-      transparent 20px
-);
-}
-    color: #D2AC47;
-    font-family: Arial, sans-serif;
-    
-/* =====================================
-   TEAM COLOR GRADIENTS
-   ===================================== */
+
+
+
+
 /*
 ====================================================
-tr
+BODY DESIGN
 
-Applies this style to every table row.
+body controls the entire webpage.
 
 In this code:
-- Makes all team rows have white text
-- Adds a text shadow so the names stay readable
-- Adds a smooth animation when the row changes
+
+- background-color:
+  Sets the main page color.
+
+- background-image:
+  Adds the diagonal gold pattern.
+
+- color:
+  Sets the default text color.
+
+- font-family:
+  Changes the website font.
 
 ====================================================
 */
+
+
+body {
+
+    background-color: #32000C;
+
+
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(255, 215, 0, 0.03),
+        rgba(255, 215, 0, 0.03) 1px,
+        transparent 1px,
+        transparent 20px
+    );
+
+
+    color: #D2AC47;
+
+
+    font-family: Arial, sans-serif;
+
+}
+/*
+====================================================
+TABLE ROW DESIGN
+
+tr = Table Row
+
+A row is one horizontal line in the table.
+
+Example:
+
+<tr>
+    <td>1</td>
+    <td>Woodstock</td>
+</tr>
+
+
+In this code:
+
+- color:
+  Makes all team text white.
+
+- text-shadow:
+  Adds a shadow behind the text so it stays
+  readable on bright team colors.
+
+- transition:
+  Makes animations smooth instead of instant.
+
+====================================================
+*/
+
 
 tr {
+
     color: white;
+
     text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+
     transition: 0.25s ease;
+
 }
+
+
 
 
 /*
 ====================================================
-td
+TABLE CELL OVERLAY
 
-Applies this style to every table cell.
+td = Table Data
+
+td controls each individual box inside a row.
+
+Example:
+
+<td>Woodstock</td>
+
 
 In this code:
-- Adds a dark transparent layer over each cell
-- Helps make bright team colors easier to read
-- Keeps white parts of gradients from hiding text
+
+- background:
+  Adds a transparent black layer over the
+  team gradients.
+
+Why?
+
+Some team colors are bright, especially white.
+
+This helps the text stay visible.
 
 ====================================================
 */
 
+
 td {
+
     background: rgba(0,0,0,0.25);
+
 }
+
+
 
 
 /*
 ====================================================
+ROW HOVER EFFECT
+
 tbody tr:hover
 
-Only affects table rows inside the table body
-when the mouse is hovering over them.
+Means:
+
+- Look inside tbody (the team rows)
+- When the mouse goes over a row
 
 In this code:
-- Makes the row slightly bigger
-- Creates a small pop-out animation
-- Does not affect the table header
+
+- transform:
+  Slightly enlarges the row.
+
+- scale(1.01):
+  Makes it 1% bigger.
+
+This creates a small "pop" effect.
 
 ====================================================
 */
 
+
 tbody tr:hover {
+
     transform: scale(1.01);
+
 }
+/*
+====================================================
+TEAM COLORS
 
-tr {
-    color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-    transition: 0.25s ease;
-}
+Each team has its own class.
+
+Example HTML:
+
+<tr class="woodstock">
+
+The CSS sees:
+
+.woodstock
+
+and applies the colors to that row.
+
+linear-gradient()
+
+Creates a smooth transition between two colors.
+
+135deg means the gradient moves diagonally
+from the bottom-left to the top-right.
+
+rgba()
+
+Works like a normal color but allows transparency.
+
+Example:
+
+rgba(255,0,0,0.5)
+
+Red with 50% transparency.
+
+====================================================
+*/
 
 
-/* Dark glass layer over team colors */
-td {
-    background: rgba(0, 0, 0, 0.25);
-}
-
-
-/* Hover effect */
-tbody tr:hover {
-    transform: scale(1.01);
-}
-
-
-/* Team gradients */
-
-
+/* Woodstock colors */
 .woodstock {
+
     background: linear-gradient(
         135deg,
         rgba(122, 31, 53, 0.7),
         rgba(128, 128, 128, 0.7)
     );
+
 }
 
 
+/* Nackawic colors */
 .nackawic {
+
     background: linear-gradient(
         135deg,
         rgba(97, 28, 43, 0.75),
         rgba(212, 175, 55, 0.65)
     );
+
 }
 
 
+/* Fredericton colors */
 .fredericton {
+
     background: linear-gradient(
         135deg,
         rgba(0, 59, 112, 0.75),
         rgba(255, 255, 255, 0.35)
     );
+
 }
 
 
+/* Carleton North colors */
 .carleton-north {
+
     background: linear-gradient(
         135deg,
         rgba(30, 58, 138, 0.75),
         rgba(255, 255, 255, 0.35)
     );
+
 }
 
 
+/* Saint Mary's colors */
 .saint-marys {
+
     background: linear-gradient(
         135deg,
         rgba(139, 0, 0, 0.75),
         rgba(255, 255, 255, 0.35)
     );
+
 }
 
 
+/* John Caldwell colors */
 .john-caldwell {
+
     background: linear-gradient(
         135deg,
         rgba(0, 102, 51, 0.75),
         rgba(255, 255, 255, 0.35)
     );
+
 }
 
 
+/* Hampton colors */
 .hampton {
+
     background: linear-gradient(
         135deg,
         rgba(17, 17, 17, 0.9),
         rgba(167, 169, 172, 0.65)
     );
+
 }
 
 
+/* Hartland colors */
 .hartland {
+
     background: linear-gradient(
         135deg,
         rgba(0, 51, 102, 0.75),
         rgba(255, 255, 255, 0.35)
     );
+
 }
 
 
+/* Harvey colors */
 .harvey {
+
     background: linear-gradient(
         135deg,
         rgba(128, 0, 0, 0.75),
         rgba(255, 255, 255, 0.35)
     );
+
 }
 
 
+/* Sir James Dunn colors */
 .sir-james-dunn {
+
     background: linear-gradient(
         135deg,
         rgba(0, 51, 102, 0.75),
         rgba(255, 215, 0, 0.55)
     );
+
 }
 
 
+/* St. Stephen colors */
 .st-stephen {
+
     background: linear-gradient(
         135deg,
         rgba(0, 100, 0, 0.75),
         rgba(255, 255, 255, 0.35)
     );
+
 }
 
 
+/* Fundy colors */
 .fundy {
+
     background: linear-gradient(
         135deg,
         rgba(0, 87, 184, 0.75),
         rgba(255, 255, 255, 0.35)
     );
+
 }
 
 
+/* McAdam colors */
 .mcadam {
+
     background: linear-gradient(
         135deg,
         rgba(128, 0, 0, 0.75),
         rgba(0, 0, 0, 0.85)
     );
+
 }
 
 
+/* Southern Victoria colors */
 .southern-victoria {
+
     background: linear-gradient(
         135deg,
         rgba(75, 0, 130, 0.75),
         rgba(255, 255, 255, 0.35)
     );
+
+}
+/*
+====================================================
+SEARCH AREA
+
+.team-search
+
+Controls the section that contains:
+
+Find Your Team
+[ Search box ]
+
+====================================================
+*/
+
+
+.team-search {
+
+    /* Centers the search area */
+    text-align: center;
+
+    /* Adds space above and below */
+    margin: 30px auto;
+
 }
 
-.team-search{
-    text-align: center;
-    margin: 30px auto;
-}
+
+
+/*
+====================================================
+SEARCH LABEL
+
+Controls the text above the search box.
+
+Example:
+
+Find Your Team
+
+====================================================
+*/
+
+
 .team-search label {
+
+    /* Makes it take its own line */
     display: block;
+
+    /* Text size */
     font-size: 18px;
+
+    /* Space between label and input */
     margin-bottom: 10px;
+
 }
+
+
+
+
+/*
+====================================================
+SEARCH INPUT
+
+input = the box where the user types.
+
+In this code:
+
+- width:
+  Controls how wide the box is.
+
+- padding:
+  Adds space inside the box.
+
+- border-radius:
+  Rounds the corners.
+
+- background:
+  Changes the input color.
+
+====================================================
+*/
+
+
 .team-search input {
+
     width: 300px;
+
     padding: 12px;
+
     border-radius: 10px;
+
     border: 1px solid rgba(255,255,255,0.2);
+
     background: #111827;
+
     color: white;
+
     font-size: 15px;
+
 }
-h1 {
-    color: gold;
-}
-h3 {
-    color: gold;
-}
+
+
+
+
+/*
+====================================================
+HEADINGS
+
+Changes the colors of your titles.
+
+====================================================
+*/
+
+
+h1,
+h3,
 h5 {
+
     color: gold;
+
 }
+
+
+
+
+/*
+====================================================
+PILL HEADER BOX
+
+.pill-box
+
+Creates the rounded box around your title.
+
+Example:
+
+( SSNB Senior Boys West Soccer A )
+
+====================================================
+*/
+
+
 .pill-box {
-  display: inline-block;
-  background-color: #1f0202;
-  padding: 10px 30px;        /* Controls height and width padding */
-  border-radius: 50px;       /* Gives it the rounded pill shape */
+
+    /* Keeps the box only as wide as the text */
+    display: inline-block;
+
+
+    /* Box color */
+    background-color: #1f0202;
+
+
+    /* Space inside the box */
+    padding: 10px 30px;
+
+
+    /* Makes the rounded pill shape */
+    border-radius: 50px;
+
 }
+
+
+
+
+/*
+====================================================
+PILL BOX TITLE
+
+Controls the main title inside the pill.
+
+====================================================
+*/
+
 
 .pill-box h1 {
-  color: gold;              /* Text color */
-  font-size: 24px;           /* Adjust size as needed */
-  margin: 0;                 /* Removes default H1 spacing */
-}
-.team-search {
+
     color: gold;
+
+    font-size: 24px;
+
+    /* Removes default h1 spacing */
+    margin: 0;
+
 }
-row.style.display = "none";
 
 
 
 
+/*
+====================================================
+SHOW MORE / SHOW LESS BUTTONS
+
+These buttons use IDs from HTML:
+
+<button id="showMoreButton">
+
+<button id="showLessButton">
+
+# means ID in CSS.
+
+====================================================
+*/
 
 
 #showMoreButton,
 #showLessButton {
-    background-color: red !important;
-    color: white !important;
-    font-size: 30px;
+
+
+    /* Button background */
+    background-color: #1f0202;
+
+
+    /* Button text */
+    color: gold;
+
+
+    /* Makes the button larger */
+    padding: 10px 30px;
+
+
+    /* Gold outline */
+    border: 2px solid gold;
+
+
+    /* Creates pill shape */
+    border-radius: 50px;
+
+
+    /* Text size */
+    font-size: 16px;
+
+
+    /* Moves button slightly */
+    margin-left: 20px;
+
+
+    /* Changes cursor to pointer */
+    cursor: pointer;
+
+
+    /* Makes animations smooth */
+    transition: 0.25s ease;
+
+}
+
+
+
+
+/*
+====================================================
+BUTTON HOVER
+
+:hover activates when the mouse goes over
+the button.
+
+====================================================
+*/
+
+
+#showMoreButton:hover,
+#showLessButton:hover {
+
+
+    /* Slightly enlarges button */
+    transform: scale(1.05);
+
+
+    /* Slightly lighter background */
+    background-color: #3a0505;
+
 }
