@@ -169,7 +169,7 @@ search.addEventListener("input", function(){
         "nackawic".includes("nack")
 
         Result:
-        true ✅
+        true 
 
 
         && means "AND"
@@ -255,4 +255,5 @@ rows.forEach((row, index) => { //element (Required): The current item being proc
     }
 
 });
-    
+const showmorebutton = document.getElementById("showmorebutton");
+search.addEventListener("click", function(){
