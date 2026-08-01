@@ -200,3 +200,37 @@ showMoreButton.addEventListener("click", function(){
 
 
 });
+
+
+
+/*
+====================================================
+SHOW LESS BUTTON
+
+When the user clicks the Show Less button:
+
+Loop through every team.
+
+If the team is 8th place or lower
+(index 7 or greater),
+
+hide that row again.
+
+====================================================
+*/
+
+const showLessButton = document.getElementById("showLessButton");
+
+showLessButton.addEventListener("click", function(){
+
+    rows.forEach((row, index) => {
+
+        if(index >= 7) {
+
+            row.style.display = "none";
+
+        }
+
+    });
+
+});
