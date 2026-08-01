@@ -2,21 +2,12 @@
 ====================================================
 FIND THE SEARCH BOX
 
-const = creates a variable that cannot be changed.
+const = creates a variable.
 
-document = the entire webpage that JavaScript
-can access.
+document = the entire webpage JavaScript can access.
 
-getElementById() = finds an HTML element using
-its id.
+getElementById() = finds an HTML element using its id.
 
-Example HTML:
-<input id="teamSearch">
-
-JavaScript finds that input and stores it
-inside the variable called "search".
-
-Now we can control the search box.
 ====================================================
 */
 
@@ -28,21 +19,11 @@ const search = document.getElementById("teamSearch");
 ====================================================
 FIND ALL TEAM ROWS
 
-querySelectorAll() = finds multiple HTML elements
-using a CSS selector.
+querySelectorAll("tbody tr") means:
 
-"tbody tr" means:
-- Look inside tbody
-- Find every tr (table row)
+Find every <tr> inside the <tbody>.
 
-This creates a list of every team row.
-
-Example:
-rows = [
- Woodstock row,
- Nackawic row,
- Fredericton row
-]
+This gives us a list of all teams.
 
 ====================================================
 */
@@ -53,18 +34,11 @@ const rows = document.querySelectorAll("tbody tr");
 
 /*
 ====================================================
-LISTEN FOR USER ACTIONS
+TEAM SEARCH FEATURE
 
-addEventListener() = waits for something to happen.
-
-Common events:
-- click = user clicks something
-- input = user types something
-- mouseover = mouse goes over something
-
-Here:
-When the user types in the search box,
-run the function below.
+When the user types:
+- Check every team
+- Highlight matching teams
 
 ====================================================
 */
@@ -72,29 +46,9 @@ run the function below.
 search.addEventListener("input", function(){
 
 
-
     /*
-    ====================================================
-    GET WHAT THE USER TYPED
-
-    search.value = the text currently inside the box.
-
-    Example:
-    User types:
-    "Nack"
-
-    search.value becomes:
-    "Nack"
-
-    toLowerCase() changes uppercase letters to
-    lowercase so searching is easier.
-
-    NACK = nack
-    Nack = nack
-
-    They all become the same.
-
-    ====================================================
+    Gets what the user typed
+    and makes it lowercase.
     */
 
     let value = search.value.toLowerCase();
@@ -102,21 +56,10 @@ search.addEventListener("input", function(){
 
 
     /*
-    ====================================================
-    LOOP THROUGH EVERY TEAM
+    Goes through every team row.
+    
+    row = current team row being checked.
 
-    forEach() means:
-    "Do this once for every item."
-
-    Example:
-
-    Team 1 → check
-    Team 2 → check
-    Team 3 → check
-
-    row represents the current team being checked.
-
-    ====================================================
     */
 
     rows.forEach(row => {
@@ -124,31 +67,15 @@ search.addEventListener("input", function(){
 
 
         /*
-        ====================================================
-        GET TEAM NAME FROM THE ROW
-
-        children[] lets us access a specific cell.
-
-        Your table:
-
-        <td>2</td>          children[0]
-        <td>Nackawic</td>   children[1]
-        <td>0</td>          children[2]
-        <td>0</td>          children[3]
-
-
-        children[1] grabs the Team column.
-
-        textContent gets the actual words inside.
+        children[1] is the Team column.
 
         Example:
-        <td>Nackawic</td>
 
-        becomes:
+        children[0] = Position
+        children[1] = Team Name
+        children[2] = Points
+        children[3] = Games Played
 
-        "Nackawic"
-
-        ====================================================
         */
 
         let team = row.children[1].textContent.toLowerCase();
@@ -156,81 +83,21 @@ search.addEventListener("input", function(){
 
 
         /*
-        ====================================================
-        CHECK IF THE TEAM MATCHES
+        Checks if the team name contains
+        what the user typed.
 
-        if = asks a question.
-
-        includes() checks if something contains
-        another piece of text.
-
-        Example:
-
-        "nackawic".includes("nack")
-
-        Result:
-        true 
-
-
-        && means "AND"
-
-        So both things must be true:
-
-        1. Team contains the search
-        2. Search is not empty
-
-        ====================================================
         */
 
         if(team.includes(value) && value !== "") {
 
 
-
-            /*
-            ====================================================
-            CHANGE CSS USING JAVASCRIPT
-
-            style allows JavaScript to change CSS.
-
-            This is the same as writing:
-
-            outline: 3px solid white;
-
-            in CSS.
-
-            ====================================================
-            */
-
             row.style.outline = "3px solid white";
-
-
-            /*
-            Makes the row slightly bigger.
-
-            Same as CSS:
-
-            transform: scale(1.03);
-
-            ====================================================
-            */
 
             row.style.transform = "scale(1.03)";
 
 
-
         } else {
 
-
-
-            /*
-            ====================================================
-            REMOVE THE EFFECT
-
-            If the team does not match,
-            return the row back to normal.
-
-            ====================================================
-            */
 
             row.style.outline = "none";
 
@@ -246,17 +113,88 @@ search.addEventListener("input", function(){
 });
 
 
-rows.forEach((row, index) => { //element (Required): The current item being processed in the array.index (Optional): The index number of the current item, starting at 0.array (Optional): The complete array object that forEach() was originally called upon.
 
-    if (index >= 6) {
-        // Hide rows 8–14
-        row.style.display: none;
-    } else {
+
+
+/*
+====================================================
+HIDE EXTRA TEAMS
+
+forEach gives us:
+
+row = the actual table row
+
+index = the position number starting at 0
+
+
+Remember:
+
+Index 0 = 1st place
+Index 6 = 7th place
+Index 7 = 8th place
+
+
+We hide everything after the top 7.
+
+====================================================
+*/
+
+
+rows.forEach((row, index) => {
+
+
+    if(index >= 7) {
+
+
+        row.style.display = "none";
+
+
     }
 
+
 });
-const showmorebutton = document.getElementById("showmorebutton");
-search.addEventListener("click", function(){
-    rows.forEach((row, index) => {
-    });
+
+
+
+
+
+/*
+====================================================
+SHOW MORE BUTTON
+
+Find the button using its id.
+
+HTML:
+
+<button id="showMoreButton">
+    Show More
+</button>
+
+====================================================
+*/
+
+
+const showMoreButton = document.getElementById("showMoreButton");
+
+
+
+/*
+====================================================
+WHEN BUTTON IS CLICKED
+
+Right now this only detects the click.
+
+Next step:
+Make it reveal the hidden rows.
+
+====================================================
+*/
+
+
+showMoreButton.addEventListener("click", function(){
+
+
+    console.log("Button clicked");
+
+
 });
