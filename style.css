@@ -907,3 +907,25 @@ footer{
     color:#777;
     font-family:"Inter",sans-serif;
 }
+@keyframes backgroundMove {
+
+    from {
+
+        background-position:
+        0% 0%,
+        0% 0%,
+        0% 0%;
+
+    }
+
+
+    to {
+
+        background-position:
+        100% 100%,
+        100% 100%,
+        100% 100%;
+
+    }
+
+}
