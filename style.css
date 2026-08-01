@@ -323,8 +323,11 @@ h5 {
 }
 row.style.display = "none";
 
-#showlessbutton {
-  margin-left: 20px; /* Pushes the button 20 pixels to the right */
+#showLessButton {
+    margin-left: 20px; /* Pushes the button 20 pixels to the right */
+    background-color: #1f0202;
+    color: gold;
 }
 
+#s
 
