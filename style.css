@@ -832,4 +832,76 @@ CENTER BOX
     /* Smooth animations */
     transition: all 0.3s ease;
 }
+.hero{
+    text-align:center;
+    padding:70px 20px;
+}
 
+.hero-text{
+    color:#555;
+    font-size:18px;
+    margin:20px auto;
+    max-width:700px;
+    font-family:"Inter",sans-serif;
+}
+
+.hero-button{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 36px;
+    background:linear-gradient(135deg,#2b2b2b,#121212);
+    color:white;
+    text-decoration:none;
+    border-radius:999px;
+    border:1px solid #3b3b3b;
+    font-weight:600;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+
+.hero-button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(0,0,0,.45);
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    margin:50px auto;
+}
+
+.stat-card{
+    width:220px;
+    padding:30px;
+    background:linear-gradient(135deg,#2b2b2b,#121212);
+    border-radius:20px;
+    border:1px solid #3b3b3b;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+    transition:.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-5px);
+}
+
+.stat-card h2{
+    font-size:40px;
+    color:white;
+    margin-bottom:10px;
+}
+
+.stat-card p{
+    color:#d4d4d4;
+    font-family:"Inter",sans-serif;
+}
+
+footer{
+    text-align:center;
+    margin-top:80px;
+    padding:30px;
+    color:#777;
+    font-family:"Inter",sans-serif;
+}
