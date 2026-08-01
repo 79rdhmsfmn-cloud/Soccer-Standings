@@ -750,3 +750,47 @@ the button.
     background-color: #3a0505;
 
 }
+.pill-box-bottom {
+
+    /* Keeps the box only as wide as the text */
+    display: inline-block;
+
+
+    /* Box color */
+    background-color: #000000;
+
+
+    /* Space inside the box */
+    padding: 10px 30px;
+
+
+    /* Makes the rounded pill shape */
+    border-radius: 50px;
+    
+    margin-top: 24px;
+
+}
+
+
+
+
+/*
+====================================================
+PILL BOX TITLE
+
+Controls the main title inside the pill.
+
+====================================================
+*/
+
+
+.pill-box-bottom h1 {
+
+    color: white;
+
+    font-size: 24px;
+
+    /* Removes default h1 spacing */
+    margin: 0;
+
+}
