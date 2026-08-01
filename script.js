@@ -244,3 +244,7 @@ search.addEventListener("input", function(){
 
 
 });
+rows.forEach((row, index) => {
+    if (index > 6)
+}
+    
