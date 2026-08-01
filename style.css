@@ -780,11 +780,11 @@ These buttons use IDs from HTML:
 
 
     /* Button background */
-    background-color: #1f0202;
+    background-color: #000000;
 
 
     /* Button text */
-    color: gold;
+    color: white;
 
 
     /* Makes the button larger */
@@ -792,7 +792,7 @@ These buttons use IDs from HTML:
 
 
     /* Gold outline */
-    border: 2px solid gold;
+    border: 2px solid white;
 
 
     /* Creates pill shape */
