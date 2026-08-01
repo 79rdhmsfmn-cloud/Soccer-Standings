@@ -596,7 +596,8 @@ Changes the colors of your titles.
 h1,
 h3,
 h5 {
-
+    font-family: "Bebas Neue", sans serif;
+    letter-spacing: 2px;
     color: gold;
 
 }
