@@ -244,7 +244,15 @@ search.addEventListener("input", function(){
 
 
 });
-rows.forEach((row, index) => {
-    if (index > 6)
-}
+
+
+rows.forEach((row, index) => { //element (Required): The current item being processed in the array.index (Optional): The index number of the current item, starting at 0.array (Optional): The complete array object that forEach() was originally called upon.
+
+    if (index >= 7) {
+
+        // Hide rows 8–14
+
+    }
+
+});
     
