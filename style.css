@@ -794,3 +794,27 @@ Controls the main title inside the pill.
     margin: 0;
 
 }
+
+.box {
+    display: inline-block;
+
+
+    /* Box color */
+    background-color: #a8a7a7;
+
+
+    /* Space inside the box */
+    padding: 10px 30px;
+
+
+    /* Makes the rounded pill shape */
+    border-radius: 30px;
+    
+    margin-top: 24px;
+    
+    outline-width: 4px;
+    
+    outline-style: solid; /* solid dashed or dotted options*/
+    
+    outline-color: #FFD700;
+}
