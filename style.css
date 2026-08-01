@@ -322,3 +322,9 @@ h5 {
     color: gold;
 }
 row.style.display = "none";
+
+.showlessbutton {
+  margin-left: 20px; /* Pushes the button 20 pixels to the right */
+}
+
+
