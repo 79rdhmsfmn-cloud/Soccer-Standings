@@ -272,12 +272,6 @@ This creates a small "pop" effect.
 ====================================================
 */
 
-
-tbody tr:hover {
-
-    transform: scale(1.01);
-
-}
 /*
 ====================================================
 TEAM COLORS
@@ -859,11 +853,6 @@ CENTER BOX
     box-shadow:0 10px 25px rgba(0,0,0,.35);
 }
 
-.hero-button:hover{
-    transform:translateY(-3px);
-    box-shadow:0 15px 35px rgba(0,0,0,.45);
-}
-
 .stats{
     display:flex;
     justify-content:center;
@@ -883,9 +872,6 @@ CENTER BOX
     transition:.3s;
 }
 
-.stat-card:hover{
-    transform:translateY(-5px);
-}
 
 .stat-card h2{
     font-size:40px;
