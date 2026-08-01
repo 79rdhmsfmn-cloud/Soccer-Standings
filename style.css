@@ -323,7 +323,7 @@ h5 {
 }
 row.style.display = "none";
 
-.showlessbutton {
+#showlessbutton {
   margin-left: 20px; /* Pushes the button 20 pixels to the right */
 }
 
