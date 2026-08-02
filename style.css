@@ -927,6 +927,9 @@ CENTER BOX
 .hero{
     text-align:center;
     padding:70px 20px;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 0.6s ease-out forwards;
 }
 
 .hero-text{
@@ -935,6 +938,9 @@ CENTER BOX
     margin:20px auto;
     max-width:700px;
     font-family:"Inter",sans-serif;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 0.6s ease-out forwards;
 }
 
 .hero-button{
@@ -949,6 +955,9 @@ CENTER BOX
     font-weight:600;
     transition:.3s;
     box-shadow:0 10px 25px rgba(0,0,0,.35);
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 0.6s ease-out forwards;
 }
 
 .stats{
@@ -957,6 +966,9 @@ CENTER BOX
     gap:25px;
     flex-wrap:wrap;
     margin:50px auto;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 0.6s ease-out forwards;
 }
 
 .stat-card{
@@ -968,6 +980,9 @@ CENTER BOX
     text-align:center;
     box-shadow:0 10px 25px rgba(0,0,0,.35);
     transition:.3s;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 0.6s ease-out forwards;
 }
 
 
@@ -975,11 +990,17 @@ CENTER BOX
     font-size:40px;
     color:white;
     margin-bottom:10px;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 0.6s ease-out forwards;
 }
 
 .stat-card p{
     color:#d4d4d4;
     font-family:"Inter",sans-serif;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 0.6s ease-out forwards;
 }
 
 footer{
@@ -988,6 +1009,7 @@ footer{
     padding:30px;
     color:#777;
     font-family:"Inter",sans-serif;
+    
 }
 
 .standings {
@@ -1004,7 +1026,20 @@ footer{
   /* Keeps the background locked in place when scrolling */
   background-attachment: fixed;
   color: #f0f6fc;
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeUp 0.6s ease-out forwards;
 }
-
+@keyframe fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+        
 
 
