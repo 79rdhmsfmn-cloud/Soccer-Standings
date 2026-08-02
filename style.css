@@ -991,8 +991,20 @@ footer{
 }
 
 .standings {
-  background-color: #f4f5f7;
-  background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
-  background-size: 20px 20px; /* Creates a clean, modern dot-matrix pattern */
+  /* Combines a dark fade overlay with your image so text stays readable */
+  background: linear-gradient(rgba(13, 17, 23, 0.85), rgba(13, 17, 23, 0.85)), 
+              url('timothy-tan-PAe2UhGo-S4-unsplash.jpg');
+              
+  /* the image covers the entire screen */
+  background-size: cover;
+  
+  /* Centers the image on the screen */
+  background-position: center;
+  
+  /* Keeps the background locked in place when scrolling */
+  background-attachment: fixed;
+  color: #f0f6fc;
 }
+
+
 
