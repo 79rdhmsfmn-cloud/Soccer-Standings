@@ -1,64 +1,127 @@
 [
     {
         "rank": "1",
-        "team": "Fredericton Christian Academy",
-        "gp": "4",
+        "team": "Woodstock High School",
+        "gp": "7",
+        "w": "6",
+        "l": "1",
+        "t": "0",
+        "points": "18"
+    },
+    {
+        "rank": "2",
+        "team": "Carleton North High School",
+        "gp": "7",
         "w": "4",
-        "l": "0",
+        "l": "3",
         "t": "0",
         "points": "12"
     },
     {
         "rank": "2",
-        "team": "John Caldwell School",
-        "gp": "3",
-        "w": "2",
-        "l": "1",
+        "team": "Fredericton Christian Academy",
+        "gp": "6",
+        "w": "4",
+        "l": "2",
         "t": "0",
-        "points": "6"
+        "points": "12"
     },
     {
         "rank": "3",
-        "team": "Hartland Community School",
-        "gp": "2",
-        "w": "1",
-        "l": "1",
-        "t": "0",
-        "points": "3"
-    },
-    {
-        "rank": "4",
-        "team": "Southern Victoria High School",
-        "gp": "1",
-        "w": "0",
-        "l": "1",
-        "t": "0",
-        "points": "0"
-    },
-    {
-        "rank": "4",
-        "team": "Nackawic High School",
-        "gp": "2",
-        "w": "0",
+        "team": "Saint Mary\u2019s Academy",
+        "gp": "6",
+        "w": "4",
         "l": "2",
         "t": "0",
-        "points": "0"
+        "points": "12"
     },
     {
-        "rank": "5",
-        "team": "Sir James Dunn Academy",
-        "gp": "1",
-        "w": "0",
-        "l": "1",
+        "rank": "4",
+        "team": "John Caldwell School",
+        "gp": "6",
+        "w": "4",
+        "l": "2",
         "t": "0",
-        "points": "0"
+        "points": "12"
     },
     {
         "rank": "6",
+        "team": "Hampton High School",
+        "gp": "4",
+        "w": "3",
+        "l": "0",
+        "t": "1",
+        "points": "10"
+    },
+    {
+        "rank": "7",
+        "team": "Hartland Community School",
+        "gp": "6",
+        "w": "3",
+        "l": "3",
+        "t": "0",
+        "points": "9"
+    },
+    {
+        "rank": "8",
         "team": "Harvey High School",
-        "gp": "1",
+        "gp": "4",
+        "w": "1",
+        "l": "0",
+        "t": "3",
+        "points": "6"
+    },
+    {
+        "rank": "8",
+        "team": "Sir James Dunn Academy",
+        "gp": "4",
+        "w": "1",
+        "l": "0",
+        "t": "3",
+        "points": "6"
+    },
+    {
+        "rank": "10",
+        "team": "St. Stephen High School",
+        "gp": "4",
+        "w": "1",
+        "l": "2",
+        "t": "1",
+        "points": "4"
+    },
+    {
+        "rank": "11",
+        "team": "Fundy Middle and High School",
+        "gp": "4",
         "w": "0",
-        "l": "1",
+        "l": "2",
+        "t": "2",
+        "points": "2"
+    },
+    {
+        "rank": "11",
+        "team": "McAdam High School",
+        "gp": "4",
+        "w": "0",
+        "l": "2",
+        "t": "2",
+        "points": "2"
+    },
+    {
+        "rank": "13",
+        "team": "Nackawic High School",
+        "gp": "6",
+        "w": "0",
+        "l": "6",
+        "t": "0",
+        "points": "0"
+    },
+    {
+        "rank": "13",
+        "team": "Southern Victoria High School",
+        "gp": "6",
+        "w": "0",
+        "l": "6",
         "t": "0",
         "points": "0"
     }

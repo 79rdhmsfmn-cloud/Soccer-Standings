@@ -12,36 +12,40 @@ try:
 
     standings_data = []
 
-    # Find all tables with the myTableStyle class
-    tables = soup.find_all("table", class_="myTableStyle")
-
-    for table in tables:
-        headers_row = table.find("tr")
-        if not headers_row:
-            continue
-        header_cells = headers_row.find_all("th")
-        header_texts = [h.text.strip() for h in header_cells]
-
-        # Check if this is the standings table
-        if "Rank" in header_texts and "Team" in header_texts and "GP" in header_texts:
-            rows = table.find_all("tr")
-            for row in rows[1:]:  # Skip header
-                cells = row.find_all("td")
-                if len(cells) >= 7:
-                    record = {
-                        "rank": cells[0].text.strip(),
-                        "team": cells[1].text.strip().replace("Soccer (CH)", "").strip(),
-                        "gp": cells[2].text.strip(),
-                        "w": cells[3].text.strip(),
-                        "l": cells[4].text.strip(),
-                        "t": cells[5].text.strip(),
-                        "points": cells[6].text.strip(),
-                    }
-                    standings_data.append(record)
+    # Find the "League" h3 heading (NOT "League Playoffs")
+    league_heading = None
+    for h3 in soup.find_all("h3"):
+        if h3.text.strip() == "League":
+            league_heading = h3
             break
 
+    if not league_heading:
+        print("Could not find 'League' heading on the page!")
+        exit(1)
+
+    # Get the table right after the "League" heading
+    standings_table = league_heading.find_next("table")
+    if not standings_table:
+        print("Could not find standings table!")
+        exit(1)
+
+    rows = standings_table.find_all("tr")
+    for row in rows[1:]:  # Skip header row
+        cells = row.find_all("td")
+        if len(cells) >= 7:
+            record = {
+                "rank": cells[0].text.strip(),
+                "team": cells[1].text.strip().replace("Soccer (CH)", "").strip(),
+                "gp": cells[2].text.strip(),
+                "w": cells[3].text.strip(),
+                "l": cells[4].text.strip(),
+                "t": cells[5].text.strip(),
+                "points": cells[6].text.strip(),
+            }
+            standings_data.append(record)
+
     if not standings_data:
-        print("No standings data found on the page!")
+        print("No standings data found!")
         exit(1)
 
     with open("standings.json", "w", encoding="utf-8") as file:
