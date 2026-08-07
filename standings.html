@@ -22,6 +22,12 @@
             border: 1px solid #000000;
             padding: 8px;
         }
+        .first-place {
+            background-color: gold;
+            color: black;
+            font-weight: bold;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+        }
         .loading {
             text-align: center;
             padding: 40px;
@@ -80,8 +86,11 @@
             html += '</tr></thead><tbody>';
 
             data.forEach(team => {
-                const teamClass = team.team.toLowerCase().replace(/[^a-z]/g, '-').replace(/-+/g, '-');
-                html += '<tr class="' + teamClass + '">';
+                let rowClass = '';
+                if (team.rank === "1") {
+                    rowClass = 'first-place';
+                }
+                html += '<tr class="' + rowClass + '">';
                 html += '<td>' + team.rank + '</td>';
                 html += '<td>' + team.team + '</td>';
                 html += '<td>' + team.gp + '</td>';
