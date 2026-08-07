@@ -1,20 +1,65 @@
 [
     {
         "rank": "1",
-        "team": "Woodstock High School Soccer (CH)",
-        "gp": "7",
-        "w": "6",
-        "l": "1",
+        "team": "Fredericton Christian Academy",
+        "gp": "4",
+        "w": "4",
+        "l": "0",
         "t": "0",
-        "points": "18"
+        "points": "12"
     },
     {
         "rank": "2",
-        "team": "Carleton North High School Soccer (CH)",
-        "gp": "7",
-        "w": "4",
-        "l": "3",
+        "team": "John Caldwell School",
+        "gp": "3",
+        "w": "2",
+        "l": "1",
         "t": "0",
-        "points": "12"
+        "points": "6"
+    },
+    {
+        "rank": "3",
+        "team": "Hartland Community School",
+        "gp": "2",
+        "w": "1",
+        "l": "1",
+        "t": "0",
+        "points": "3"
+    },
+    {
+        "rank": "4",
+        "team": "Southern Victoria High School",
+        "gp": "1",
+        "w": "0",
+        "l": "1",
+        "t": "0",
+        "points": "0"
+    },
+    {
+        "rank": "4",
+        "team": "Nackawic High School",
+        "gp": "2",
+        "w": "0",
+        "l": "2",
+        "t": "0",
+        "points": "0"
+    },
+    {
+        "rank": "5",
+        "team": "Sir James Dunn Academy",
+        "gp": "1",
+        "w": "0",
+        "l": "1",
+        "t": "0",
+        "points": "0"
+    },
+    {
+        "rank": "6",
+        "team": "Harvey High School",
+        "gp": "1",
+        "w": "0",
+        "l": "1",
+        "t": "0",
+        "points": "0"
     }
 ]

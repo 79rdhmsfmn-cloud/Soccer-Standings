@@ -1,354 +1,148 @@
-<!--
-====================================================
-HEADER SECTION
-
-<header> = The top section of the webpage.
-It usually contains the website title, logo,
-and navigation links.
-
-<nav> = Navigation.
-This tells the browser that the links inside
-help the user move around the website.
-
-<a> = Anchor (link).
-Used to create clickable links to other pages
-or sections of the website.
-
-These tags don't change how the page looks by
-themselves—they help organize the page and make
-it easier for browsers, search engines, and
-other developers to understand the website.
-====================================================
--->
-
 <!DOCTYPE html>
 <html lang="en">
-<style>
- .table-container {
-    padding: 30px; /* Generates a 30px blank space all around the table */
-    background-color: #000000; /* Optional: highlights the padded area */
-  }
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 20px solid #000000;
-  }
-  th, td {
-    border: 1px solid #000000;
-    padding: 8px;
-  }
-</style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SSNB Senior Boys Soccer West</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .table-container {
+            padding: 30px;
+            background-color: #000000;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 20px solid #000000;
+        }
+        th, td {
+            border: 1px solid #000000;
+            padding: 8px;
+        }
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #888;
+            font-size: 1.2em;
+        }
+        .last-updated {
+            text-align: center;
+            color: #666;
+            font-size: 0.85em;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
-
 <body class="standings">
-
     <header>
       <div class="pill-box">
         <h1>SSNB Senior Boys West Soccer</h1>
         <h3>2026 Season</h3>
-        <h5>Woodstock High School 2025 winners</h5>
+        <h5>Auto-updated from SSNB</h5>
       </div>
     </header>
-    
 
-    <!-- Background design circle -->
     <div class="circle"></div>
-<div class="team-search">
-    <label for="teamSearch">
-        Find Your Team
-    </label>
-    <input 
-        type="text" 
-        id="teamSearch" 
-        placeholder="Search team..."
-    >
 
-</div>
+    <div class="team-search">
+        <label for="teamSearch">Find Your Team</label>
+        <input type="text" id="teamSearch" placeholder="Search team...">
+    </div>
 
-    <!-- This is the table below - Jaxon -->
+    <div id="standings-container">
+        <p class="loading">Loading standings...</p>
+    </div>
 
-    <table>
+    <div class="last-updated" id="lastUpdated"></div>
 
-
-        <!--
-        thead = Table Head
-        This section contains the column titles
-        -->
-
-        <thead>
-
-            <!-- tr = Table Row -->
-
-            <tr>
-              
-              <th>Pos</th>
-              <th>Team</th>
-              <th>PL</th>
-              <th>W</th>
-              <th>D</th>
-              <th>L</th>
-              <th>GD</th>
-              <th>PTS</th>
-                
-                 
-
-            </tr>
-
-        </thead>
-
-
-
-        <!--
-        tbody = Table Body
-        This section contains all team information
-        -->
-
-
-        <tbody>
-
-
-            <!-- td = Table Data -->
-
-
-            <tr class="woodstock">
-
-                <td>1</td>
-                <td>Woodstock</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                
-                 
-            </tr>
-
-
-
-            <tr class="nackawic">
-
-                <td>2</td>
-                <td>Nackawic</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                
-
-            </tr>
-
-
-
-            <tr class="fredericton">
-
-                <td>3</td>
-                <td>Fredericton</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                
-
-            </tr>
-
-
-
-            <tr class="carleton-north">
-
-                <td>4</td>
-                <td>Carleton North</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                
-
-            </tr>
-
-
-
-            <tr class="saint-marys">
-
-                <td>5</td>
-                <td>Saint Mary's</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                
-
-            </tr>
-
-
-
-            <tr class="john-caldwell">
-
-                <td>6</td>
-                <td>John Caldwell</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                
-
-            </tr>
-
-
-
-            <tr class="hampton">
-
-                <td>7</td>
-                <td>Hampton</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                
-
-            </tr>
-
-
-
-            <tr class="hartland">
-
-                <td>8</td>
-                <td>Hartland</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                
-
-            </tr>
-
-
-
-            <tr class="harvey">
-
-                <td>9</td>
-                <td>Harvey</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                
-
-            </tr>
-
-
-
-            <tr class="sir-james-dunn">
-
-                <td>10</td>
-                <td>Sir James Dunn</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                
-
-            </tr>
-
-
-
-            <tr class="st-stephen">
-
-                <td>11</td>
-                <td>St. Stephen</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                
-
-            </tr>
-
-
-
-            <tr class="fundy">
-
-                <td>12</td>
-                <td>Fundy</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                
-
-            </tr>
-
-
-
-            <tr class="mcadam">
-
-                <td>13</td>
-                <td>McAdam</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                
-
-            </tr>
-
-
-
-            <tr class="southern-victoria">
-
-                <td>14</td>
-                <td>Southern Victoria</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                
-
-            </tr>
-
-
-
-        </tbody>
-
-
-    </table>
     <button type="button" id="showMoreButton">show more</button>
     <button type="button" id="showLessButton">show less</button>
-<!-- This loads your JavaScript file -->
-    <script src="script.js"></script>
+
+    <script>
+    async function loadStandings() {
+        const container = document.getElementById('standings-container');
+
+        try {
+            const response = await fetch('standings.json?' + Date.now());
+            const data = await response.json();
+
+            if (!data || data.length === 0) {
+                container.innerHTML = '<p class="loading">No standings data available.</p>';
+                return;
+            }
+
+            let html = '<table><thead><tr>';
+            html += '<th>Pos</th><th>Team</th><th>PL</th><th>W</th><th>L</th><th>D</th><th>PTS</th>';
+            html += '</tr></thead><tbody>';
+
+            data.forEach(team => {
+                const teamClass = team.team.toLowerCase().replace(/[^a-z]/g, '-').replace(/-+/g, '-');
+                html += '<tr class="' + teamClass + '">';
+                html += '<td>' + team.rank + '</td>';
+                html += '<td>' + team.team + '</td>';
+                html += '<td>' + team.gp + '</td>';
+                html += '<td>' + team.w + '</td>';
+                html += '<td>' + team.l + '</td>';
+                html += '<td>' + team.t + '</td>';
+                html += '<td>' + team.points + '</td>';
+                html += '</tr>';
+            });
+
+            html += '</tbody></table>';
+            container.innerHTML = html;
+
+            initSearch();
+            initShowButtons();
+
+            document.getElementById('lastUpdated').textContent =
+                'Last updated: ' + new Date().toLocaleString();
+
+        } catch (error) {
+            container.innerHTML = '<p class="loading">Error loading standings. Please try again later.</p>';
+            console.error('Error loading standings:', error);
+        }
+    }
+
+    function initSearch() {
+        const search = document.getElementById('teamSearch');
+        search.addEventListener('input', function() {
+            let value = search.value.toLowerCase();
+            const rows = document.querySelectorAll('tbody tr');
+            rows.forEach(row => {
+                let team = row.children[1].textContent.toLowerCase();
+                if (team.includes(value) && value !== "") {
+                    row.style.outline = "3px solid white";
+                    row.style.transform = "scale(1.03)";
+                } else {
+                    row.style.outline = "none";
+                    row.style.transform = "scale(1)";
+                }
+            });
+        });
+    }
+
+    function initShowButtons() {
+        const rows = document.querySelectorAll('tbody tr');
+
+        document.getElementById('showMoreButton').addEventListener('click', function() {
+            rows.forEach(row => { row.style.display = ''; });
+        });
+
+        document.getElementById('showLessButton').addEventListener('click', function() {
+            rows.forEach((row, index) => {
+                if (index >= 7) { row.style.display = 'none'; }
+            });
+        });
+
+        rows.forEach((row, index) => {
+            if (index >= 7) { row.style.display = 'none'; }
+        });
+    }
+
+    loadStandings();
+    </script>
 </body>
 
 </html>
