@@ -933,7 +933,7 @@ CENTER BOX
 }
 
 .hero-text{
-    color:#555;
+    color:#b0b0b0;
     font-size:18px;
     margin:20px auto;
     max-width:700px;
@@ -1044,3 +1044,42 @@ footer{
         
 
 
+
+/* ================= LANGUAGE TOGGLE ================= */
+.lang-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    background: linear-gradient(135deg, #2b2b2b, #121212);
+    color: white;
+    border: 1px solid #3b3b3b;
+    border-radius: 999px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+}
+
+.lang-toggle:hover {
+    transform: scale(1.05);
+    border-color: gold;
+    box-shadow: 0 4px 20px rgba(255,215,0,0.2);
+}
+
+/* ================= LINK CARDS ================= */
+.link-card {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+    border-color: gold;
+    box-shadow: 0 10px 30px rgba(255,215,0,0.1);
+}
